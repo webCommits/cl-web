@@ -828,6 +828,15 @@ form button:hover {
     transition: ease-in-out 0.5s;
 }
 
+form #category {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+}
+
 
 @media all and (max-width: 1250px) {
     .hideOnMobile {
@@ -852,7 +861,6 @@ form button:hover {
     h1 {
         font-size: 2em;
         font-weight: bold;
-        color: #f9faf8;
     }
 
     .header a {

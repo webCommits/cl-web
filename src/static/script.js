@@ -115,3 +115,24 @@ function smoothScrollWithOffset(selector, offset = 200) {
     };
   }
 
+  function sendMail(event) {
+    event.preventDefault(); // Verhindert das normale Absenden des Formulars
+
+    // Werte aus dem Formular auslesen
+    const name = document.getElementById("name").value;
+    const number = document.getElementById("number").value;
+    const email = document.getElementById("mail").value;
+    const subject = document.getElementById("subject").value;
+    const category = document.getElementById("category").value;
+    const message = document.getElementById("message").value;
+
+    const subjectPrefix = category.toUpperCase() + ": ";
+
+    // `mailto`-Link erstellen
+    const mailtoLink = `mailto:cl-verkehrstechnik@gmx.de?subject=${encodeURIComponent(subjectPrefix + subject)}&body=${encodeURIComponent(
+        `Name: ${name}\nTelefonnummer: ${number}\nE-Mail: ${email}\n\nNachricht:\n${message}`
+    )}`;
+
+    // E-Mail-Programm öffnen
+    window.location.href = mailtoLink;
+}
