@@ -1,9 +1,9 @@
-:root{
+:root {
     --main-bg: #D10811;
     --main-bg-dark: #D10811;
-    --main-bg-secondary: #1f4757;
+    --main-bg-secondary: #848484;
     --main-sec: #313D5A;
-    --secondary: #73628A;
+    --secondary: #969595;
     --primary: #CBC5EA;
     --font: rgb(48, 48, 48);
 }
@@ -33,12 +33,13 @@ h1 {
 h2 {
     font-size: 2em;
     font-weight: bold;
-    color: var(--secondary);
+    color: black;
 }
 
 h3 {
     font-size: 24px;
     font-weight: bold;
+    color: black;
 }
 
 ul {
@@ -59,7 +60,7 @@ a {
 
 .header {
     background-color: var(--main-bg-dark);
-    box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.75);
     z-index: 999;
     margin: 0;
     border: solid 0px #000000;
@@ -99,8 +100,6 @@ nav a {
 
 nav a:hover {
     background-color: var(--main-bg-secondary);
-    border: var(--main-bg-secondary);
-    border-radius: 8px;
     transition: all 1s;
 }
 
@@ -136,8 +135,10 @@ nav li:first-child {
 }
 
 .open {
-    transform: translateX(0); /* Added */
-    opacity: 1; /* Added */
+    transform: translateX(0);
+    /* Added */
+    opacity: 1;
+    /* Added */
 }
 
 .sidebar li {
@@ -176,7 +177,7 @@ nav img {
     text-align: justify;
 }
 
-.secone h1{
+.secone h1 {
     font-size: 4em;
 }
 
@@ -185,30 +186,31 @@ nav img {
     margin: 0;
 }
 
-.secone img{
+.secone img {
     max-width: 200px;
     margin-top: 11em;
     margin-bottom: 1em;
 }
 
-.secone a{
+.secone a {
     margin-bottom: 6em;
 }
 
 .seconebutton {
     background-color: var(--secondary);
-    color: var(--font);
+    color: black;
     border-radius: 8px;
     font-size: large;
     padding: 0.5em 2em;
     border: 0;
     font-weight: 400;
     margin-top: 64px;
-    box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
 .seconebutton:hover {
     background-color: var(--main-bg-secondary);
+    color: white;
     transition: ease-in-out 0.5s;
 }
 
@@ -237,19 +239,19 @@ nav img {
     margin-top: 2em;
 }
 
-.sectwo .left h2{
+.sectwo .left h2 {
     color: var(--font);
     margin-bottom: 0;
     font-size: large;
 }
 
-.sectwo .left h3{
+.sectwo .left h3 {
     color: var(--primary);
     margin-top: 0;
     font-size: xx-large;
 }
 
-.sectwo .left p{
+.sectwo .left p {
     max-width: 69em;
 }
 
@@ -262,7 +264,7 @@ nav img {
     border: 0;
     font-weight: 400;
     margin-top: 8px;
-    box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
 .sectwobutton:hover {
@@ -278,7 +280,7 @@ nav img {
     max-width: 30em;
     border: solid #313D5A 2px;
     border-radius: 8px;
-    box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
 #about {
@@ -290,11 +292,11 @@ nav img {
     margin-bottom: 6em;
 }
 
-#aboutus .right img{
+#aboutus .right img {
     max-width: 24em;
 }
 
-#philosophy{
+#philosophy {
     margin-bottom: 6em;
 }
 
@@ -302,12 +304,12 @@ nav img {
     margin: 3.6em 4em 0em 0em;
 }
 
-#philosophy .right img{
+#philosophy .right img {
     border-radius: 12px;
     max-width: 24em;
 }
 
-#principles{
+#principles {
     padding: 2em;
     position: relative;
     z-index: 1;
@@ -343,7 +345,7 @@ nav img {
     color: var(--primary);
 }
 
-#principles::before{
+#principles::before {
     content: "";
     position: absolute;
     top: 0;
@@ -367,7 +369,7 @@ nav img {
     gap: 10%;
 }
 
-.price-box{
+.price-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -398,7 +400,7 @@ nav img {
     margin: -18px;
 }
 
-.price-box span{
+.price-box span {
     font-size: x-large;
     color: var(--primary);
     margin-bottom: 8px;
@@ -410,12 +412,12 @@ nav img {
     filter: invert(67%) sepia(71%) saturate(3162%) hue-rotate(84deg) brightness(113%) contrast(109%);
 }
 
-.price-box h2{
+.price-box h2 {
     color: var(--primary);
     margin-bottom: 0;
 }
 
-.price-box h3{
+.price-box h3 {
     font-size: medium;
     color: var(--primary);
     margin-bottom: 0;
@@ -440,12 +442,12 @@ nav img {
     margin-bottom: 6em;
 }
 
-.portfolio p{
+.portfolio p {
     margin-left: 10%;
     margin-right: 10%;
 }
 
-.portfolio h1{
+.portfolio h1 {
     font-size: 3em;
 }
 
@@ -460,11 +462,11 @@ nav img {
     justify-content: space-between;
     align-items: center;
     gap: 5em;
-    text-align:initial;
+    text-align: initial;
     margin: 3em;
 }
 
-.website-container .left{
+.website-container .left {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -473,7 +475,8 @@ nav img {
 .website-container .left h3 {
     color: var(--primary);
 }
-.website-container .right{
+
+.website-container .right {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -486,7 +489,7 @@ nav img {
 
 .website-container img {
     max-width: 24em;
-    box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
 .website-container img:hover {
@@ -505,11 +508,11 @@ nav img {
     justify-content: space-between;
     align-items: center;
     gap: 5em;
-    text-align:initial;
+    text-align: initial;
     margin: 3em;
 }
 
-.website-containerpo .left{
+.website-containerpo .left {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -518,7 +521,8 @@ nav img {
 .website-containerpo .left h3 {
     color: var(--primary);
 }
-.website-containerpo .right{
+
+.website-containerpo .right {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -531,7 +535,7 @@ nav img {
 
 .website-containerpo img {
     max-width: 24em;
-    box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
 .website-containerpo img:hover {
@@ -552,7 +556,7 @@ nav img {
     border: 0;
     font-weight: 400;
     margin-top: 8px;
-    box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.75);
     margin-bottom: 3em;
 }
 
@@ -578,7 +582,7 @@ nav img {
     text-align: justify;
 }
 
-.preisliste h1{
+.preisliste h1 {
     font-size: 3em;
 }
 
@@ -587,7 +591,7 @@ nav img {
     margin: 0;
 }
 
-.secthree p{
+.secthree p {
     color: var(--font);
     text-align: center;
 }
@@ -606,7 +610,7 @@ nav img {
 .secthreecontent img {
     /* Ehemals Preislistenbild */
     max-height: 20em;
-} 
+}
 
 .secthreecontent iframe {
     max-width: 100%;
@@ -644,7 +648,7 @@ nav img {
     margin-bottom: 12em;
 }
 
-.contact-sec h1{
+.contact-sec h1 {
     font-size: 3em;
 }
 
@@ -657,7 +661,7 @@ nav img {
     max-width: 30em;
 }
 
-.contact-container{
+.contact-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -678,7 +682,7 @@ nav img {
     transition: all linear 1s;
 }
 
-.contact-container img{
+.contact-container img {
     max-width: 7em;
     width: 120px;
     filter: invert();
@@ -698,12 +702,12 @@ nav img {
     gap: 1em;
 }
 
-.impressum img{
+.impressum img {
     max-height: 80px;
     margin-top: 2em;
 }
 
-.impressum a:hover{
+.impressum a:hover {
     background-color: var(--main-bg-secondary);
     padding: 2px;
     transition: all linear 0.5s;
@@ -769,7 +773,7 @@ nav img {
     margin-bottom: 8em;
 }
 
-.impressum-page{
+.impressum-page {
     margin: 0em 2em 0em 2em;
     display: flex;
     flex-direction: column;
@@ -780,7 +784,7 @@ nav img {
     overflow: auto;
 }
 
-.impressum-page p{
+.impressum-page p {
     color: var(--font);
     margin: 0;
 }
@@ -796,7 +800,8 @@ label {
     margin: 10px 0 5px;
 }
 
-input, textarea {
+input,
+textarea {
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ddd;
@@ -813,7 +818,7 @@ form button {
     border: 0;
     font-weight: 400;
     margin-top: 8px;
-    box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.75);
     margin-bottom: 3em;
     width: 100%;
 }
@@ -833,12 +838,12 @@ form button:hover {
         display: block;
     }
 
-    .sectwo .left h3{
+    .sectwo .left h3 {
         text-align: left;
         font-size: x-large;
     }
 
-    .sectwo .right img{
+    .sectwo .right img {
         max-width: 20em;
     }
 }
@@ -905,20 +910,20 @@ form button:hover {
         margin-right: 0;
     }
 
-    .sectwo .right img{
+    .sectwo .right img {
         max-width: 18em;
         margin-top: 4em;
     }
 
-    #aboutus .right img{
+    #aboutus .right img {
         max-width: 10em;
     }
 
     #philosophy .right {
         margin: 3.6em 4em 0em 0em;
     }
-    
-    #philosophy .right img{
+
+    #philosophy .right img {
         border-radius: 12px;
         max-width: 16em;
     }
@@ -966,13 +971,13 @@ form button:hover {
         justify-content: center;
     }
 
-    .sectwo{
+    .sectwo {
         padding: 2em;
         position: relative;
         z-index: 1;
     }
 
-    .sectwo::before{
+    .sectwo::before {
         content: "";
         position: absolute;
         top: 0;
@@ -993,7 +998,7 @@ form button:hover {
         text-align: center;
     }
 
-    #aboutus::before{
+    #aboutus::before {
         content: "";
         position: absolute;
         top: 0;
@@ -1009,7 +1014,7 @@ form button:hover {
         z-index: -1;
     }
 
-    #philosophy::before{
+    #philosophy::before {
         content: "";
         position: absolute;
         top: 0;
@@ -1029,13 +1034,13 @@ form button:hover {
         font-size: larger;
     }
 
-    .sectwo .right{
+    .sectwo .right {
         display: none;
         padding: 0;
         margin: 0;
     }
 
-    .portfolio{
+    .portfolio {
         margin-top: 4em;
     }
 
@@ -1063,16 +1068,16 @@ form button:hover {
         z-index: -1;
     }
 
-    .website-container .images{
+    .website-container .images {
         display: none;
     }
 
-    .website-container .right{
+    .website-container .right {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-    
+
     .website-container .right h3 {
         color: var(--primary);
         text-align: center;
@@ -1102,16 +1107,16 @@ form button:hover {
         z-index: -1;
     }
 
-    .website-containerpo .images{
+    .website-containerpo .images {
         display: none;
     }
 
-    .website-containerpo .right{
+    .website-containerpo .right {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-    
+
     .website-containerpo .right h3 {
         color: var(--primary);
         text-align: center;
@@ -1122,19 +1127,19 @@ form button:hover {
         gap: 2em;
     }
 
-    .contactformular{
+    .contactformular {
         width: 100%;
     }
 
-    .contactformular h1{
+    .contactformular h1 {
         font-size: xx-large;
     }
 
-    .contact-container{
+    .contact-container {
         gap: 2em;
     }
 
-    .contact-container img{
+    .contact-container img {
         max-width: 7em;
         width: 42px;
         filter: invert();
