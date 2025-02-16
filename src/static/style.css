@@ -20,7 +20,7 @@ body {
     flex-direction: column;
     justify-content: center;
     flex: 1;
-    background: #97979768;
+    background: #dedede68;
     box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
@@ -165,7 +165,7 @@ nav img {
 }
 
 .secone {
-    background-color: none;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -175,20 +175,40 @@ nav img {
     color: var(--font);
     font-size: 1.1em;
     text-align: justify;
+    width: 100%;
+    max-width: 92em;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
-.secone h1 {
-    font-size: 4em;
+.secone::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/static/images/plan.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(6px);
+    opacity: 0.5;
+    z-index: -1;
+    width: 100%;  /* Stellt sicher, dass es genau so breit ist wie .secone */
+    height: 100%; /* Stellt sicher, dass es die gesamte Höhe einnimmt */
 }
 
-.secone h3,
-.secone h1 {
-    margin: 0;
+
+.secone h2 {
+    margin-bottom: 0;
+    color: white;
+    text-shadow: rgb(20, 20, 20) 1px 0 10px;
 }
 
 .secone img {
-    max-width: 200px;
-    margin-top: 11em;
+    max-width: 300px;
+    margin-top: 2em;
     margin-bottom: 1em;
 }
 
@@ -198,7 +218,7 @@ nav img {
 
 .seconebutton {
     background-color: var(--secondary);
-    color: black;
+    color: white;
     border-radius: 8px;
     font-size: large;
     padding: 0.5em 2em;
@@ -210,7 +230,7 @@ nav img {
 
 .seconebutton:hover {
     background-color: var(--main-bg-secondary);
-    color: white;
+    color: rgb(240, 240, 240);
     transition: ease-in-out 0.5s;
 }
 
@@ -218,20 +238,49 @@ nav img {
     margin: 0;
     padding: 8px;
     width: 3em;
+    filter: invert();
 }
 
+#about {
+    padding: 20em 0 20em 0;
+}
 
 .sectwo {
     display: flex;
-    flex-direction: row;
+    position: relative;
+    flex-direction: column;
     justify-content: center;
     align-content: baseline;
     padding: 3em;
-    margin: 3em;
+    margin: 6em 2em 6em 2em;
     color: var(--font);
     text-align: justify;
-    margin-bottom: 6em;
+    background-color: #cccccc;
+    border: 0px;
+    border-radius: 2em;
+    box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 1);
+    overflow: hidden; /* Verhindert, dass das Bild über die Section hinausgeht */
+    z-index: 1;
 }
+
+.sectwo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/static/images/background-icons.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(6px);
+    opacity: 0.3;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
 
 .sectwo .left {
     display: flex;
@@ -242,29 +291,34 @@ nav img {
 .sectwo .left h2 {
     color: var(--font);
     margin-bottom: 0;
-    font-size: large;
+    font-size: 2em;
 }
 
 .sectwo .left h3 {
-    color: var(--primary);
+    color: white;
     margin-top: 0;
-    font-size: xx-large;
+    font-size: 3em;
 }
 
 .sectwo .left p {
     max-width: 69em;
+    font-size: 1.2em;
 }
 
 .sectwobutton {
-    background-color: var(--secondary);
-    color: var(--font);
+    background-color: var(--main-bg);
     border-radius: 8px;
     font-size: large;
     padding: 0.5em 2em;
     border: 0;
     font-weight: 400;
-    margin-top: 8px;
     box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.75);
+    margin: 1em auto;
+    width: 25%;
+}
+
+.sectwobutton a{
+    color: white;
 }
 
 .sectwobutton:hover {
@@ -281,11 +335,6 @@ nav img {
     border: solid #313D5A 2px;
     border-radius: 8px;
     box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.75);
-}
-
-#about {
-    margin-top: 2em;
-    margin-bottom: 4em;
 }
 
 #aboutus {
@@ -310,10 +359,13 @@ nav img {
 }
 
 #principles {
-    padding: 2em;
+    margin: 4em 0 8em 0;
+    padding: 5em 4em 8em 2em;
     position: relative;
     z-index: 1;
-    margin-bottom: 6em;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: rgb(212, 212, 212);
 }
 
 #principles .left ul {
@@ -333,16 +385,17 @@ nav img {
 
 #principles .left ul li img {
     height: 20px;
+    filter: invert(29%) sepia(57%) saturate(5507%) hue-rotate(343deg) brightness(84%) contrast(123%);
     width: auto;
 }
 
 #principles .left ul li .text {
-    display: flex;
-    flex-direction: column;
+    font-size: larger;
 }
 
 #principles .left ul li strong {
-    color: var(--primary);
+    font-weight: 900;
+    color: #D10811;
 }
 
 #principles::before {
@@ -353,11 +406,11 @@ nav img {
     right: 0;
     bottom: 0;
     width: 100%;
-    background-image: url("/static/images/logo.png");
+    background-image: url("/static/images/plan2.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     filter: blur(8px);
-    opacity: 0.5;
+    opacity: 0.2;
     z-index: -1;
 }
 
@@ -591,6 +644,89 @@ nav img {
     margin: 0;
 }
 
+.triangle-section {
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 2em;
+    justify-items: center;
+    text-align: center;
+    margin: 0em 2em 10em 2em;
+    padding: 5em 2em 5em 2em;
+    border: 0px;
+    border-radius: 32px;
+    z-index: 1;
+    position: relative;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.triangle-section::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 100%;
+    background-image: url("/static/images/background-icons.png");
+    background-repeat: repeat-y;
+    background-size: cover;
+    filter: blur(8px);
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.triangle-item {
+    background: #D10811;
+    color: white;
+    text-shadow: rgb(20, 20, 20) 1px 0 10px;
+    padding: 2em;
+    border-radius: 24px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.triangle-item h3{
+    color: #f3f3f3;
+}
+
+/* Erste Box oben, zwei unten */
+.triangle-item:nth-child(1) {
+    grid-column: span 2;
+    justify-self: center;
+}
+
+.triangle-item:nth-child(2),
+.triangle-item:nth-child(3) {
+    justify-self: center;
+}
+
+.triangle-button {
+    grid-column: span 2;
+    background-color: #AEA7A7;
+    font-size: 1.2em;
+    font-weight: medium;
+    padding: 0.5em 1.5em;
+    border: solid white 1px;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.75);
+    margin-top: 2em;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.triangle-button a{
+    color: white;
+}
+
+.triangle-button:hover {
+    background-color: #a5060d;
+}
+
+
 .secthree p {
     color: var(--font);
     text-align: center;
@@ -707,6 +843,10 @@ nav img {
     margin-top: 2em;
 }
 
+.impressum a{
+    color: white;
+}
+
 .impressum a:hover {
     background-color: var(--main-bg-secondary);
     padding: 2px;
@@ -767,6 +907,7 @@ nav img {
     bottom: 64px;
     opacity: 80%;
     pointer-events: auto;
+    z-index: 999;
 }
 
 .spacer {
@@ -811,7 +952,7 @@ textarea {
 
 form button {
     background-color: var(--secondary);
-    color: var(--font);
+    color: white;
     border-radius: 8px;
     font-size: large;
     padding: 0.5em;
@@ -826,6 +967,7 @@ form button {
 form button:hover {
     background-color: var(--main-bg-secondary);
     transition: ease-in-out 0.5s;
+    color: rgb(232, 232, 232);
 }
 
 form #category {
@@ -847,14 +989,7 @@ form #category {
         display: block;
     }
 
-    .sectwo .left h3 {
-        text-align: left;
-        font-size: x-large;
-    }
 
-    .sectwo .right img {
-        max-width: 20em;
-    }
 }
 
 @media all and (max-width: 1000px) {
@@ -876,8 +1011,8 @@ form #category {
         padding: 20px 30px;
     }
 
-    .sectwo {
-        margin-left: 8px;
+    #principles {
+        text-align: left;
     }
 
     .contact-container a {
@@ -905,6 +1040,10 @@ form #category {
         text-align: center;
     }
 
+    .secone h2{
+        text-align: center;
+    }
+
     .secone p {
         font-size: medium;
     }
@@ -913,14 +1052,57 @@ form #category {
         max-width: 20em;
     }
 
-    .sectwo {
-        margin-left: 8px;
-        margin-right: 0;
+    #about{
+        margin: 0;
+        padding: 8em 0 8em 0;
     }
 
-    .sectwo .right img {
-        max-width: 18em;
-        margin-top: 4em;
+    .sectwo .left h2 {
+        font-size: 1.2em;
+    }
+
+    .sectwo .left h3 {
+        font-size: 1.4em;
+        text-align: justify;
+        font-weight: bold;
+    }
+
+    .sectwo .left p {
+        text-align: left;
+    }
+
+    .sectwobutton {
+        width: auto;
+
+    }
+
+    #principles .left h2 {
+        font-size: 2em;
+    }
+
+    .triangle-section {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 1.5em;
+        margin: 2em;
+        padding: 3em 1em;
+        margin-bottom: 8em;
+    }
+
+    .triangle-item {
+        max-width: 100%;
+        justify-self: center;
+    }
+
+    .triangle-item:nth-child(1) {
+        grid-column: auto;
+    }
+
+    .triangle-button {
+        grid-column: auto;
+        justify-self: center;
+        width: fit-content;
+        padding: 1em 2em;
     }
 
     #aboutus .right img {
@@ -979,27 +1161,7 @@ form #category {
         justify-content: center;
     }
 
-    .sectwo {
-        padding: 2em;
-        position: relative;
-        z-index: 1;
-    }
 
-    .sectwo::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        background-image: url("/static/images/markusspiske-code.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        filter: blur(8px);
-        opacity: 0.5;
-        z-index: -1;
-    }
 
     #about h1 {
         font-size: xx-large;
@@ -1038,15 +1200,6 @@ form #category {
         z-index: -1;
     }
 
-    .sectwo h2 {
-        font-size: larger;
-    }
-
-    .sectwo .right {
-        display: none;
-        padding: 0;
-        margin: 0;
-    }
 
     .portfolio {
         margin-top: 4em;
