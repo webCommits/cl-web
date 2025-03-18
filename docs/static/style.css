@@ -113,6 +113,10 @@ nav li:first-child {
     filter: none;
 }
 
+#headerlogoa {
+    padding: 0 30px 0 6px;
+}
+
 .sidebar {
     position: fixed;
     top: 0;
@@ -942,6 +946,63 @@ nav img {
     z-index: 999;
 }
 
+.telbutton {
+    background: var(--main-bg-secondary);
+    position: fixed;
+    bottom: 64px;
+    right: 64px;
+    width: 32px;
+    height: 32px;
+    border: var(--secondary);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0 4px #000000;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+}
+
+.telbutton.active {
+    bottom: 164px;
+    opacity: 60%;
+    pointer-events: auto;
+    z-index: 999;
+}
+
+.mailbutton {
+    background: var(--main-bg-secondary);
+    position: fixed;
+    bottom: 64px;
+    right: 64px;
+    width: 32px;
+    height: 32px;
+    border: var(--secondary);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0 4px #000000;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+}
+
+.mailbutton.active {
+    bottom: 114px;
+    opacity: 60%;
+    pointer-events: auto;
+    z-index: 999;
+}
+
+.totop img,
+.telbutton img,
+.mailbutton img {
+    width: 18px;
+    filter: invert();
+}
+
 .spacer {
     margin-bottom: 8em;
 }
@@ -1193,8 +1254,6 @@ form #category {
         justify-content: center;
     }
 
-
-
     #about h1 {
         font-size: xx-large;
         text-align: center;
@@ -1347,7 +1406,18 @@ form #category {
         bottom: 24px;
         right: 24px;
         opacity: 60%;
+    }
 
+    .telbutton.active {
+        bottom: 64px;
+        right: 24px;
+        opacity: 60%;
+    }
+
+    .mailbutton.active {
+        bottom: 104px;
+        right: 24px;
+        opacity: 60%;
     }
 }
 
