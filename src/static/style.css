@@ -107,6 +107,10 @@ nav li:first-child {
     margin-right: auto;
 }
 
+#headerlogoa {
+    padding: 0 30px 0 6px;
+}
+
 .logo {
     height: 64px;
     width: auto;
@@ -489,7 +493,7 @@ nav img {
     object-position: 100% 80%;
 }
 
-.aboutus .text{
+.aboutus .text {
     padding: 1em;
 }
 
@@ -590,6 +594,63 @@ nav img {
     opacity: 80%;
     pointer-events: auto;
     z-index: 999;
+}
+
+.telbutton {
+    background: var(--main-bg-secondary);
+    position: fixed;
+    bottom: 64px;
+    right: 64px;
+    width: 32px;
+    height: 32px;
+    border: var(--secondary);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0 4px #000000;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+}
+
+.telbutton.active {
+    bottom: 164px;
+    opacity: 60%;
+    pointer-events: auto;
+    z-index: 999;
+}
+
+.mailbutton {
+    background: var(--main-bg-secondary);
+    position: fixed;
+    bottom: 64px;
+    right: 64px;
+    width: 32px;
+    height: 32px;
+    border: var(--secondary);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0 4px #000000;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+}
+
+.mailbutton.active {
+    bottom: 114px;
+    opacity: 60%;
+    pointer-events: auto;
+    z-index: 999;
+}
+
+.totop img,
+.telbutton img,
+.mailbutton img {
+    width: 18px;
+    filter: invert();
 }
 
 .spacer {
@@ -826,7 +887,18 @@ form #category {
         bottom: 24px;
         right: 24px;
         opacity: 60%;
+    }
 
+    .telbutton.active {
+        bottom: 64px;
+        right: 24px;
+        opacity: 60%;
+    }
+
+    .mailbutton.active {
+        bottom: 104px;
+        right: 24px;
+        opacity: 60%;
     }
 }
 
