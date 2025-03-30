@@ -3,25 +3,37 @@ title: CL-Verkehrstechnik | Unsere Leistungen
 ---
 {% extends "./_includes/base.njk" %}
 {% block content %}
-<div class="aboutus">
-  <div class="banner">
-    <img src="/static/images/plan2.jpeg" alt="Placeholder Image">
-  </div>
-  <div class="text animate hidden">
-    <h1>Über Uns</h1>
-    <p>Dank unserer langjährigen Berufserfahrung in einer mittleren Stadt Nordrhein-Westfalens im Bereich der
+  <div class="aboutus">
+    <div class="sideshow-container">
+      <button class="prev" onclick="scrollSlides(-1)">❮</button>
+      <div class="sideshow-pictures">
+        <div id="slide-1">
+          <img src="/static/images/plan.jpeg" alt="Bild 1">
+        </div>
+        <div id="slide-2">
+          <img src="/static/images/plan2.jpeg" alt="Bild 2">
+        </div>
+        <div id="slide-3">
+          <img src="/static/images/plan2.jpeg" alt="Bild 3">
+        </div>
+      </div>
+      <button class="next" onclick="scrollSlides(1)">❯</button>
+    </div>
+    <div class="text animate hidden">
+      <h1>Über Uns</h1>
+      <p>Dank unserer langjährigen Berufserfahrung in einer mittleren Stadt Nordrhein-Westfalens im Bereich der
       Verkehrsbehörde haben wir uns entschlossen, die CL-Verkehrstechnik GbR in Eschweiler zu gründen.</p>
 
-    <p>Seit unserer Gründung haben wir uns als zuverlässiger und kompetenter Dienstleister etabliert. Unser Anspruch ist
+      <p>Seit unserer Gründung haben wir uns als zuverlässiger und kompetenter Dienstleister etabliert. Unser Anspruch ist
       es, unseren Kunden maßgeschneiderte, professionelle und präzise Verkehrszeichenpläne zu bieten.</p>
 
-    <p>Sind Sie auf der Suche nach einem erfahrenen und gut vernetzten Partner für die Erstellung von
+      <p>Sind Sie auf der Suche nach einem erfahrenen und gut vernetzten Partner für die Erstellung von
       Verkehrszeichenplänen oder die Einholung behördlicher Genehmigungen? Dann stehen wir Ihnen gerne telefonisch, per
       E-Mail oder über unser Kontaktformular zur Verfügung.</p>
+    </div>
+    <button class="sectwobutton">
+      <a href="/contact/">Zum Kontaktformular</a>
+    </button>
   </div>
-  <button class="sectwobutton">
-    <a href="/contact/">Zum Kontaktformular</a>
-  </button>
-</div>
-<div class="spacer"></div>
+  <div class="spacer"></div>
 {% endblock %}

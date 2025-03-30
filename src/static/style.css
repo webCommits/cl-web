@@ -510,6 +510,57 @@ nav img {
     margin-left: 1em;
 }
 
+.sideshow-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 24em;
+    overflow: hidden;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(117, 117, 117);
+    background: none;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+    transition: color 0.3s;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.sideshow-pictures {
+    display: flex;
+    width: 100%;
+    height: 24em;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.sideshow-pictures > div {
+    flex: 0 0 100%;
+    height: 24em;
+    scroll-snap-align: start;
+}
+
+.sideshow-pictures img {
+    width: 100%;
+    height: 24em;
+    object-fit: cover;
+}
+
 .contactformular {
     max-width: 30em;
 }
