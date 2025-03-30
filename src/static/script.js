@@ -155,3 +155,9 @@ function smoothScrollWithOffset(selector, offset = 200) {
     // E-Mail-Programm öffnen
     window.location.href = mailtoLink;
 }
+
+function scrollSlides(direction) {
+    let container = document.querySelector(".sideshow-pictures");
+    let scrollAmount = container.clientWidth;
+    container.scrollBy({ left: direction * scrollAmount, behavior: "smooth" });
+}
